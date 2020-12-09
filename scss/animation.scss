@@ -1,0 +1,32 @@
+#f795efda-d52b-464f-8ed0-c83c27181fc6 > path:nth-child(32) {
+    animation: commet 5s ease-in-out;
+}
+
+@keyframes commet {
+
+    0% {
+        opacity: .8;
+
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(10px);
+        transform: translateY(10px);
+
+
+    }
+
+    70% {
+        opacity: 0;
+        transform: translateX(-10px);
+        transform: translateY(-10px);
+
+
+    }
+
+
+    100% {
+        opacity: .8;
+    }
+}
