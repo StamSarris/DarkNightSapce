@@ -19,7 +19,37 @@
   * body {
     /* Card main styling*/ }
     * body .nav_mobile {
-      display: none; }
+      display: none;
+      position: fixed;
+      background: #eeeeee;
+      color: rgba(0, 0, 0, 0.774);
+      top: 0;
+      height: 100vh;
+      width: 0;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end; }
+      * body .nav_mobile .nav_mobile_title {
+        align-self: flex-start;
+        writing-mode: vertical-rl; }
+        * body .nav_mobile .nav_mobile_title img {
+          display: inline-block;
+          transform: rotate(90deg);
+          height: 14px; }
+      * body .nav_mobile ul {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end; }
+        * body .nav_mobile ul li {
+          margin-top: 20px; }
+          * body .nav_mobile ul li a {
+            font-size: 40px;
+            font-weight: 800; }
+          * body .nav_mobile ul li:nth-child(1) {
+            color: #a74c4c; }
     * body .header {
       min-width: 250px; }
       * body .header .title {
@@ -28,13 +58,26 @@
         justify-content: space-between;
         align-items: center; }
         * body .header .title .title_wrapper {
+          width: 100vw;
           display: flex;
           flex-direction: row;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
           height: 80px; }
-          * body .header .title .title_wrapper img {
-            height: 20%; }
+          * body .header .title .title_wrapper .logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            * body .header .title .title_wrapper .logo img {
+              height: 20%; }
+          * body .header .title .title_wrapper .open_mob_nav {
+            left: 0; }
+            * body .header .title .title_wrapper .open_mob_nav div {
+              width: 25px;
+              height: 2px;
+              background-color: #e2dcdc;
+              margin: 6px 0; }
     * body .main {
       display: flex; }
     * body .cards {
@@ -114,18 +157,9 @@
     body .header .nav_desktop {
       display: none; }
     body .nav_mobile {
-      display: block;
-      position: fixed;
-      background: #eeeeee;
-      color: rgba(0, 0, 0, 0.774);
-      top: 0;
-      height: 100vh;
-      width: 70vw; }
-      body .nav_mobile ul li a {
-        font-size: 50px;
-        font-weight: 800; }
-      body .nav_mobile ul li:nth-child(1) {
-        color: indianred; }
+      display: none;
+      width: 70vw;
+      transition: 2s; }
     body .main {
       flex-direction: column; }
       body .main .main_title {
